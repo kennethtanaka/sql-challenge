@@ -40,20 +40,6 @@ CREATE TABLE employees (
 	PRIMARY KEY (emp_number)
 );
 
--- Drop table if exists
-DROP TABLE employees;
-
--- Create new table
-CREATE TABLE employees (
-	emp_number INT,
-	birthdate DATE,
-	first_name VARCHAR,
-	last_name VARCHAR,
-	gender VARCHAR,
-	hire_date DATE,
-	PRIMARY KEY (emp_number)
-);
-
 SELECT * FROM employees
 
 -- Drop table if exists
@@ -65,8 +51,8 @@ CREATE TABLE dept_manager (
 	emp_number INT,
 	start_date DATE,
 	end_date DATE
-	FOREIGN KEY (emp_number)
-	REFERENCES employees (emp_number)
+	FOREIGN KEY (emp_number) REFERENCES employees (emp_number),
+	FOREIGN KEY (department_number) REFERENCES departments (department_number),
 	PRIMARY KEY (department_number, emp_number)
 );
 
