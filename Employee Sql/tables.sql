@@ -19,8 +19,8 @@ CREATE TABLE dept_emp (
 	department_number VARCHAR (4),
 	start_date DATE,
 	end_date DATE,
-	FOREIGN KEY (emp_number)
-	REFERENCES employees (emp_number),
+	FOREIGN KEY (emp_number) REFERENCES employees (emp_number),
+	FOREIGN KEY (department_number) REFERENCES departments (department_number)
 	PRIMARY KEY (emp_number)
 );
 
@@ -67,6 +67,7 @@ CREATE TABLE salaries (
 	salary INT,
 	start_date DATE,
 	end_date DATE,
+	FOREIGN KEY (emp_number) REFERENCES employees (emp_number),
 	PRIMARY KEY (emp_number)
 );
 
@@ -80,6 +81,7 @@ CREATE TABLE titles (
 	title VARCHAR,
 	start_date DATE,
 	end_date DATE,
+	FOREIGN KEY (emp_number) REFERENCES employees (emp_number),
 	PRIMARY KEY (emp_number)
 );
 
