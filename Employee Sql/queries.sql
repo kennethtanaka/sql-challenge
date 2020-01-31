@@ -1,5 +1,5 @@
 SELECT * FROM departments;
-SELECT * FROM dept_emp
+SELECT * FROM dept_emp;
 SELECT * FROM dept_manager;
 SELECT * FROM employees;
 SELECT * FROM salaries;
@@ -7,7 +7,6 @@ SELECT * FROM titles;
 
 -- List the following details of each employee: employee number, last name, first name, gender, and salary.
 
--- Perform an INNER JOIN on the two tables
 SELECT 
 e.emp_number, 
 e.last_name, 
@@ -22,7 +21,8 @@ e.emp_number=s.emp_number;
 SELECT 
 emp_number, 
 last_name, 
-first_name
+first_name,
+hire_date
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 
