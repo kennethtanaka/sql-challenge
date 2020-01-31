@@ -37,10 +37,7 @@ CREATE TABLE dept_emp (
 	emp_number INT,
 	department_number VARCHAR (4),
 	start_date DATE,
-	end_date DATE,
-	FOREIGN KEY (emp_number) REFERENCES employees (emp_number),
-	FOREIGN KEY (department_number) REFERENCES departments (department_number),
-	PRIMARY KEY (emp_number)
+	end_date DATE
 );
 
 SELECT * FROM dept_emp
@@ -86,8 +83,7 @@ CREATE TABLE titles (
 	emp_number INT,
 	title VARCHAR,
 	start_date DATE,
-	end_date DATE,
-	PRIMARY KEY (emp_number)
+	end_date DATE
 );
 
 SELECT * FROM titles
